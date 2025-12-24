@@ -2,21 +2,17 @@ spring:
   application:
     name: serviceContact
   datasource:
-    url: jdbc:h2:mem:serviceContactdb
-    driver-class-name: org.h2.Driver
-    username: sa
-    password: ""
+    url: jdbc:postgresql://localhost:5432/servicecontactdb
+    username: postgres
+    password: Raimat@2809
+    driver-class-name: org.postgresql.Driver
 
     jpa:
-      database-platform: org.hibernate.dialect.H2Dialect
       hibernate:
         ddl-auto: update
       show-sql: true
-
-    h2:
-      console:
-        enabled: true
-        path: /h2-console
-
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.PostgreSQLDialect
   server:
     port: 8080

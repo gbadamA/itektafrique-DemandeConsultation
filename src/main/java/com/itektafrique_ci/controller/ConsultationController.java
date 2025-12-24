@@ -28,6 +28,6 @@ public class ConsultationController {
     }
     @GetMapping("/hello")
     public String sayHello() {
-        return "Hello from Spring Boot GET API!";
+        return "Hello from Spring Boot GET API FROM ITEKT!";
     }
 }
